@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package rolldice;
+
+// The greeting service definition.
+service Dice {
+  // Sends a greeting
+  rpc RollDice (ClientRequest) returns (ServerResponse) {}
+}
+
+// The client request
+message ClientRequest {
+  string dice = 1;
+}
+
+// The server response
+message ServerResponse {
+  string message = 1;
+}
